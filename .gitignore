@@ -2,3 +2,5 @@ venv/
 *.txt
 *.csv
 .idea/
+*.md
+__pycache__/
