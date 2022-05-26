@@ -37,4 +37,6 @@ def parse_time_metrics_file(filename):
         averaged.at[i, "Value"] = round(average, 1)
         averaged.at[i, "Standard deviation"] = round((averageOfSquares - average**2) ** 0.5, 1)
 
+    averaged = averaged.reindex(columns=['Name', 'Params', 'Value', 'Measurement Unit', 'Standard deviation'])
+
     return averaged
